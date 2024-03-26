@@ -1,4 +1,4 @@
-            - name: Trigger CircleCI Pipeline
+name: Trigger CircleCI Pipeline
   # You may pin to the exact commit or the version.
   # uses: CircleCI-Public/trigger-circleci-pipeline-action@a81cd720792a6088debd7f182b552845abb86f1b
   uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.2.0
