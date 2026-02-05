@@ -1,0 +1,33 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run build:scripts",
+    "allocate": "node ./scripts/lib/allocate",
+    "delete": "node ./scripts/lib/delete",
+    "genjcl": "node ./scripts/lib/genjcl",
+    "upload": "node ./scripts/lib/upload",
+    "build": "zowe jobs submit lf \"./build/custom.jcl\" --directory \"./output\"",
+    "build:scripts": "tsc --pretty",
+    "start": "npm run upload && npm run build",    
+    "test": "jest",
+    "watch": "node ./scripts/lib/nodemon"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/config": "^3.3.5",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^25.2.0",
+    "config": "^4.2.0",
+    "mustache": "^4.2.0",
+    "jest": "^30.2.0",
+    "jest-stare": "^2.5.3",
+    "nodemon": "^3.1.11",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3"
+  }
+}
